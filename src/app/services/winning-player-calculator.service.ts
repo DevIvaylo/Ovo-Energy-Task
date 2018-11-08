@@ -7,14 +7,13 @@ import {WinningPlayer} from '../interfaces/winning-player';
   providedIn: 'root'
 })
 export class WinningPlayerCalculatorService {
-  private readonly playerWinLabel: string = 'Player 1 wins!!';
+  private readonly playerWinLabel: string = 'Player wins!!';
   private readonly computerPlayerWinLabel: string = 'Computer wins!!';
   private readonly playerDrawLabel: string = 'Its a Draw!!';
   private computerPointCount = 0;
   private playerPointCount = 0;
 
-  public getWinningPlayer(playerSelection: Item,
-                          computerPlayerSelection: Item): WinningPlayer {
+  public getWinningPlayer(playerSelection: Item, computerPlayerSelection: Item): WinningPlayer {
     switch (playerSelection.value === computerPlayerSelection.value) {
       case true:
         return this.getWiningPlayer(this.playerDrawLabel, this.playerPointCount, this.computerPointCount);
@@ -23,8 +22,7 @@ export class WinningPlayerCalculatorService {
     }
   }
 
-  private getCalculatedWinningPlayer(playerSelection: Item,
-                                     computerPlayerSelection: Item): WinningPlayer {
+  private getCalculatedWinningPlayer(playerSelection: Item, computerPlayerSelection: Item): WinningPlayer {
     switch (this.playerWinningItem(playerSelection, computerPlayerSelection)) {
       case true:
         this.playerPointCount = (this.playerPointCount) + (1);
@@ -43,8 +41,7 @@ export class WinningPlayerCalculatorService {
     };
   }
 
-  private playerWinningItem(playerSelection: Item,
-                                                computerSelection: Item): boolean {
+  private playerWinningItem(playerSelection: Item, computerSelection: Item): boolean {
     return ((playerSelection.value) - (computerSelection.value) + 3) % 3 === 1;
   }
 }
