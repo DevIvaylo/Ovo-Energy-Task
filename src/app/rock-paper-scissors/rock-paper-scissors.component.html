@@ -4,7 +4,7 @@
       <div class="playerPanel panel panel-default">
         <div class="panel-heading">
           <h1 id="playerTitle"><i class="iconMarginRight fa fa-user-circle-o" aria-hidden="true"></i>Player</h1>
-          <p id="playerPoints"><span class="label label-primary">Player 1 score: {{gameModel.playerScore ? gameModel.playerScore : 0 }}</span>
+          <p id="playerPoints"><span class="label label-primary">Player score: {{gameModel?.playerScore ? gameModel?.playerScore : 0 }}</span>
           </p>
         </div>
         <div class="panel-body">
@@ -27,12 +27,12 @@
       <div class="playerPanel panel panel-default">
         <div class="panel-heading">
           <h1 id="computerTitle"><i class="iconMarginRight fa fa-user-circle-o" aria-hidden="true"></i>Computer</h1>
-          <p id="computerPoints"><span class="label label-primary">Computer score: {{gameModel.computerScore ? gameModel.computerScore : 0 }}</span>
+          <p id="computerPoints"><span class="label label-primary">Computer score: {{gameModel?.computerScore ? gameModel?.computerScore : 0 }}</span>
           </p>
         </div>
         <div class="panel-body">
           <h2 id="computerSelection" *ngIf="gameModel?.computerPlayerSelection.name">Computer choice:
-            {{gameModel.computerPlayerSelection.name}}</h2>
+            {{gameModel?.computerPlayerSelection.name}}</h2>
         </div>
       </div>
     </div>
@@ -43,6 +43,7 @@
     </div>
   </div>
 </div>
+
 
 
 
