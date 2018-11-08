@@ -177,7 +177,7 @@ describe('RockPaperScissorsComponent', () => {
     })
   ));
 
-  it('when player 1 selects scissors and computer selects paper, player wins', async(inject(
+  it('when player selects scissors and computer selects paper, player wins', async(inject(
     [RandomItemGeneratorService],
     (randomItemGeneratorService: RandomItemGeneratorService) => {
       component.ngOnInit();
@@ -202,7 +202,7 @@ describe('RockPaperScissorsComponent', () => {
     })
   ));
 
-  it('when player 1 selects scissors and computer selects scissors, nobody wins, its a draw', async(inject(
+  it('when player selects scissors and computer selects scissors, nobody wins, its a draw', async(inject(
     [RandomItemGeneratorService],
     (randomItemGeneratorService: RandomItemGeneratorService) => {
       component.ngOnInit();
